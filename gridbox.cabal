@@ -33,6 +33,7 @@ library
       base       >= 4.9 && < 5.0
   exposed-modules:
       GridBox.Box
+      GridBox.Compress
       GridBox.Grid
       GridBox.Grouping
       GridBox.Row
@@ -51,5 +52,6 @@ test-suite spec
     , hspec
   other-modules:
       GridBox.BoxSpec
+      GridBox.CompressSpec
       GridBox.GridSpec
   default-language: Haskell2010
