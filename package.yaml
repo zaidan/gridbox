@@ -1,0 +1,42 @@
+name: gridbox
+version: '0.0.0.1'
+license: MIT
+license-file: LICENSE
+maintainer: firas@zaidan.de
+stability: stable
+github: zaidan/gridbox
+synopsis: A grid box model
+description: >
+    Spans a 2D grid of n rows and m boxes with equal size.
+category: Graphics
+author:
+  - Firas Zaidan
+extra-source-files:
+  - README.md
+
+ghc-options: -Wall
+
+default-extensions:
+  - BangPatterns
+  - DeriveFunctor
+  - FlexibleContexts
+  - LambdaCase
+  - OverloadedStrings
+  - RecordWildCards
+  - ScopedTypeVariables
+  - ViewPatterns
+
+dependencies:
+  - base       >= 4.9 && < 5.0
+
+library:
+  source-dirs: src
+  dependencies: []
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - gridbox
+      - hspec
