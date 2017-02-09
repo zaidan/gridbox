@@ -64,7 +64,7 @@ compressCols :: [BoxCol] -> CompressedCols
 compressCols =
   mergeCols . fromCols
 
--- Convert list of box cols to compressed cols with length = 1
+-- | Convert list of box cols to compressed cols with length = 1
 fromCols :: [BoxCol] -> CompressedCols
 fromCols =
   map (\l -> (l, 1))
