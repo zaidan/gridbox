@@ -4,9 +4,12 @@ module GridBox.Box
   ( Box(..)
   , BoxRow
   , BoxCol
+  , BoxPosition
+  , BoxPositions
   , makeBox
   , makeVectors
   , fromBox
+  , fromBoxes
   ) where
 
 -- | A grid box with position (x,y) at row and col with size.  
@@ -25,6 +28,12 @@ type BoxRow = Int
 
 -- | Col of a box
 type BoxCol = Int
+
+-- | Box position
+type BoxPosition = (BoxRow, BoxCol)
+
+-- | Box positions
+type BoxPositions = [BoxPosition]
 
 -- | Create a box with position (x,y) at row and col with given size.
 makeBox :: Double -> Double -> Int -> Int -> (Double, Double) -> Box
@@ -46,6 +55,13 @@ makeVectors box = [
     boxX = x box
     boxY = y box
 
--- | Convert from box to (row, col)
-fromBox :: Box -> (BoxRow, BoxCol)
-fromBox box = (row box, col box)
+-- | Convert from Box to (row, col)
+fromBox :: Box -> BoxPosition
+fromBox box =
+  (row box, col box)
+
+-- | Convert all boxes in list from Box to (row, col)
+fromBoxes :: [Box] -> BoxPositions
+fromBoxes boxes =
+  map fromBox boxes
+
