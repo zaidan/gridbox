@@ -6,7 +6,8 @@ module GridBox.Grouping
   , groupBoxesByRow
   ) where
 
-import GridBox.Box (Box, BoxRow, BoxCol, fromBoxes)
+import GridBox.Box (Box, BoxRow, BoxCol)
+import GridBox.Position (fromBoxes)
 
 import Data.List (sortBy, groupBy)
 import Data.Function (on)

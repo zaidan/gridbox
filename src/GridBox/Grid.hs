@@ -1,8 +1,7 @@
 {-| Grid of rows
 -}
 module GridBox.Grid
-  (
-    Grid
+  ( Grid
   , createGrid
   , makeGrid
   ) where
