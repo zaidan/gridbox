@@ -34,6 +34,7 @@ library
   exposed-modules:
       GridBox.Box
       GridBox.Grid
+      GridBox.Grouping
       GridBox.Row
   default-language: Haskell2010
 
