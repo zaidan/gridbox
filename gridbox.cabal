@@ -1,9 +1,9 @@
--- This file has been generated from package.yaml by hpack version 0.16.0.
+-- This file has been generated from package.yaml by hpack version 0.15.0.
 --
 -- see: https://github.com/sol/hpack
 
 name:           gridbox
-version:        0.1.0.0
+version:        0.1.0.1
 synopsis:       A grid box model
 description:    Spans a 2D grid of n rows and m boxes with equal size.
 category:       Graphics
