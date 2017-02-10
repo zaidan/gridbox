@@ -52,8 +52,7 @@ topY :: Double -> Double -> Double
 topY pos  yOffset =
   pos + yOffset
 
-{-| Transform given coordinates with position (x, y) scale, x- and y-offset.
--}
+-- | Transform given coordinates with position (x, y) scale, x- and y-offset.
 transform :: (Double, Double) -> Double -> Double -> Double -> (Double, Double) -> (Double, Double)
 transform (ox, oy) scale xOffset yOffset (x, y) =
   (topX (scale * x) (xOffset + ox), topY (scale *y) (yOffset + oy))
