@@ -14,6 +14,6 @@ grid = createGrid (1.0, 1.0) 1.0 1.0 0 0
 spec :: Spec
 spec =
   describe "createGrid" $ do
-    it "shoult create grid" $
+    it "should create grid" $
       grid `shouldBe` expected
         where expected = [[box]]

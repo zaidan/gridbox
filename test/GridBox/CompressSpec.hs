@@ -14,5 +14,5 @@ compressed = [(0,[(0,2)]),(1,[(0,2)])]
 spec :: Spec
 spec =
   describe "compressGrid" $ do
-    it "shoult compress grid" $
+    it "should compress grid" $
       compressGrid grid `shouldBe` compressed
