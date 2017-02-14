@@ -3,7 +3,7 @@
 -- see: https://github.com/sol/hpack
 
 name:           gridbox
-version:        0.2.0.0
+version:        0.3.0.0
 synopsis:       A grid box model
 description:    Spans a 2D grid of n rows and m boxes with equal size.
 category:       Graphics

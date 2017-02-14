@@ -8,6 +8,7 @@ module GridBox.Coordinate
     , topX
     , topY
     , transform
+    , transformOffset
     ) where
 
 import GridBox.Box (Box(width, height, x, y))
@@ -52,7 +53,12 @@ topY :: Double -> Double -> Double
 topY pos  yOffset =
   pos + yOffset
 
+-- | Transform given coordinates with position (x, y) and scale.
+transform :: (Double, Double) -> Double -> (Double, Double) -> (Double, Double)
+transform =
+  transformOffset (0,0)
+
 -- | Transform given coordinates with position (x, y) scale, x- and y-offset.
-transform :: (Double, Double) -> Double -> Double -> Double -> (Double, Double) -> (Double, Double)
-transform (ox, oy) scale xOffset yOffset (x, y) =
+transformOffset :: (Double, Double) -> (Double, Double) -> Double -> (Double, Double) -> (Double, Double)
+transformOffset (xOffset, yOffset) (ox, oy) scale (x, y) =
   (topX (scale * x) (xOffset + ox), topY (scale *y) (yOffset + oy))
